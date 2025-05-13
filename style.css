@@ -1,0 +1,217 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #111;
+  padding: 1rem 2rem;
+  color: white;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+.hero {
+  text-align: center;
+  padding: 4rem 1rem;
+  background-color: #ddd;
+}
+.portfolio {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.video-thumb img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+}
+.contact {
+  padding: 2rem 1rem;
+  background-color: #eee;
+  text-align: center;
+}
+.contact form {
+  margin-top: 1rem;
+}
+.contact input {
+  padding: 0.5rem;
+  width: 250px;
+  margin-right: 0.5rem;
+}
+.contact button {
+  padding: 0.5rem 1rem;
+  background-color: #111;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #111;
+  color: white;
+}
+@media (max-width: 600px) {
+  .gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+  /* Base styles for all screen sizes */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header */
+header {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 32px; /* Header font size */
+  width: 100%; /* Full width of the viewport */
+  height: 10vh; /* 10% of viewport height */
+}
+
+/* Portfolio section */
+.portfolio {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  width: 100%; /* Full width */
+  height: auto; /* Adjust height as per content */
+}
+
+/* Email collection form */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  width: 100%; /* Full width */
+}
+
+/* Form elements */
+.form-container input,
+.form-container button {
+  padding: 12px 20px;
+  font-size: 16px;
+  margin: 10px 0;
+  width: 100%;
+  max-width: 400px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  /* Adjust header padding and font size for smaller screens */
+  header {
+    padding: 15px;
+    font-size: 26px;
+    height: 12vh; /* Adjust height for mobile */
+  }
+
+  /* Adjust portfolio grid for mobile */
+  .portfolio {
+    grid-template-columns: 1fr; 
+    gap: 15px;
+    height: auto; /* Allow it to adjust as per content */
+  }
+
+  /* Form adjustments for mobile */
+  .form-container input, .form-container button {
+    width: 90%; 
+    padding: 10px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Further adjust header text size and height for very small screens */
+  header {
+    font-size: 24px;
+    height: 15vh; /* Slightly larger header on smaller screens */
+  }
+
+  /* Portfolio and form adjustments for smaller mobile screens */
+  .portfolio {
+    gap: 10px;
+    height: auto;
+  }
+
+  .form-container input, .form-container button {
+    width: 90%; 
+    padding: 8px 12px;
+  }
+}
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+  right:20px;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    top: 20px;       /* distance from the top */
+    right: 20px;     /* push to right edge */
+    z-index: 1001;
+  }
+
+  header {
+    position: relative; /* ensure toggle positioning is relative to header */
+  }
+
+  header nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #000;
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #0ff;
+    flex-direction: column;
+  }
+
+  header nav.active {
+    display: flex;
+  }
+
+  header nav a {
+    display: block;
+    margin: 10px 0;
+  }
+}
